@@ -9,6 +9,7 @@ import { ContactsItem } from './Contacts.style';
 
 function Contacts() {
   const filter = useSelector(getFilter);
+
   const contacts = useSelector(getContacts);
 
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ function Contacts() {
 
   const filtredContacts = () => {
     const normalizedFilter = filter.toLowerCase();
+
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(normalizedFilter)
     );

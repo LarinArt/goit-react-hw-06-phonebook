@@ -4,9 +4,11 @@ import { changeFilter, getFilter } from 'store/contacts-slice/contacts-slice';
 
 export const Filter = () => {
   const filter = useSelector(getFilter);
+
   const dispatch = useDispatch();
 
   const changeFieldFilter = e => dispatch(changeFilter(e.currentTarget.value));
+
   return (
     <FilterLabel>
       <FilterText>Find contacts by name</FilterText>
