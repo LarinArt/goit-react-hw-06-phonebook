@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Form, Label, Title, Input } from './ContactsForm.style';
 import { Button } from 'components/ui/Button';
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact, getContacts } from 'store/contacts-slice/contacts-slice';
+import { addContact, getContacts } from 'store/contacts-slice';
 
 function ContactsForm({ onClose }) {
   const [name, setName] = useState('');
