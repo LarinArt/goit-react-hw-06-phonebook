@@ -6,12 +6,12 @@ import { addContact, getContacts } from 'store/contacts-slice';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 
-function ContactsForm({ onClose }) {
+function ContactsForm() {
   const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
 
   const validationSchema = yup.object({
-    phone: yup
+    number: yup
       .string()
       .required('')
       .test({
@@ -27,7 +27,7 @@ function ContactsForm({ onClose }) {
 
   const handleSubmit = (values, { resetForm }) => {
     contacts.find(
-      ({ name }) => name.toLowerCase() !== values.name.toLowerCase()
+      ({ name }) => name.toLowerCase() === values.name.toLowerCase()
     )
       ? Report.warning(
           `${values.name}`,
