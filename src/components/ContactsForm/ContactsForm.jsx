@@ -6,7 +6,7 @@ import { addContact, getContacts } from 'store/contacts-slice';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 
-function ContactsForm() {
+function ContactsForm({ onClose }) {
   const contacts = useSelector(getContacts);
   const dispatch = useDispatch();
 
@@ -37,6 +37,7 @@ function ContactsForm() {
       : dispatch(addContact(values));
 
     resetForm();
+    onClose();
   };
 
   return (
