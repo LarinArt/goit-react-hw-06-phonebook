@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Form, Field } from 'formik';
 
-export const Form = styled.form`
+export const StyledForm = styled(Form)`
   margin-bottom: 50px;
 `;
 
@@ -16,7 +17,7 @@ export const Title = styled.span`
   margin-bottom: 5px;
 `;
 
-export const Input = styled.input`
+export const StyledInput = styled(Field)`
   height: 40px;
   padding: 0 10px 0 10px;
   border: 1px solid ${({ theme }) => theme.colors.secondBgColor};
