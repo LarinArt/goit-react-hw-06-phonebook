@@ -2,7 +2,7 @@ import { Filter } from './components/Filter/Filter';
 import { Container } from './components/ui/Container';
 import { MainTitle, SecondTitle, Section } from './components/ui';
 import Contacts from 'components/Contacts/Contacts';
-import ContactsSection from 'components/Contacts/ContactsSection/ContactsSection';
+import ContactsSection from 'components/ContactsSection/ContactsSection';
 
 function App() {
   return (
